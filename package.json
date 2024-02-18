@@ -5,17 +5,26 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "vercel dev",
+    "test": "jest -i",
     "initDb": "node ./db/initDb.js"
   },
   "author": "Szilveszter",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@google-cloud/translate": "^8.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "mongoose": "^7.6.3"
+    "mongoose": "^7.6.3",
+    "helmet": "^4.6.0"
+  },
+  "keywords": [
+    "vercel"
+  ],
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^27.0.3",
+    "supertest": "^6.1.3"
   }
 }
